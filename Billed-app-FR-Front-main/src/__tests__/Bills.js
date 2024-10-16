@@ -210,7 +210,7 @@ describe("Given I am connected as an employee", () => {
       const errorCodes = [404, 500];
 
       errorCodes.forEach((errorCode) => {
-        test(`fetches bills from an API and fails with ${errorCode} message error`, async () => {
+        test(`Then fails with ${errorCode} message error`, async () => {
           jest.spyOn(mockStore, "bills");
           mockStore.bills.mockImplementationOnce(() => {
             return {
